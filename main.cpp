@@ -68,17 +68,36 @@ string DecryptText(string encryptedText, int EKey) {
 }
 
 int main() {
-    string text;
-    int EKey;
+    int option;
 
-    cout << "Input encrypted text: ";
-    cin >> text;
+    cout << "1 - Encrypt\n2 - Decrypt" << endl;
 
-    cout << "Input EKey: ";
-    cin >> EKey;
+    cin >> option;
 
-    cout << DecryptText(text, EKey);
+    if(option == 2){
+        string text;
+        int EKey;
+
+        cout << "Input encrypted text: ";
+        cin >> text;
+
+        cout << "Input EKey: ";
+        cin >> EKey;
+
+        cout << DecryptText(text, EKey);
+
+        return 0;
+    }
+    else{
+        string text;
+        int EKey;
+
+        cout << "Input text: ";
+        cin >> text;
+
+        cout << EncryptText(text);
 
     return 0;
+    }
 }
 
