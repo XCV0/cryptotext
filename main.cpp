@@ -3,7 +3,7 @@
 #include <locale>
 #include <codecvt>
 #include <string>
-#include <sstream> // Add this include for std::ostringstream and std::istringstream
+#include <sstream>
 #include <random>
 #include "main.h"
 
@@ -60,17 +60,6 @@ string DecryptText(const string& encryptedText, int EKey) {
     string decryptedMsg;
 
     for (size_t i = 0; i < encryptedText.length(); i ++) {
-        // Пропускаем пробелы
-        // if (encryptedText[i] == ' ') {
-        //     decryptedMsg += encryptedText[i];
-        //     i++;
-        // }
-
-        // if ((encryptedText[i] == '!' || encryptedText[i] == ',') && i == encryptedText.length() - 1) {
-        //     decryptedMsg += encryptedText[i];
-        //     continue;
-        // }
-
         if ((encryptedText[i] == '!' || encryptedText[i] == ',' || encryptedText[i] == ' ') && i != encryptedText.length()) {
             decryptedMsg += encryptedText[i];
             continue;
@@ -93,47 +82,14 @@ string DecryptText(const string& encryptedText, int EKey) {
     return decryptedMsg;
 }
 
-
-
-// int main() {
-//     int option;
-
-//     cout << "1 - Encrypt\n2 - Decrypt" << endl;
-
-//     cin >> option;
-
-//     if(option == 2){
-//         string text;
-//         int EKey;
-
-//         cout << "Input encrypted text: ";
-//         cin >> text;
-
-//         cout << "Input EKey: ";
-//         cin >> EKey;
-
-//         cout << DecryptText(text, EKey);
-
-//         return 0;
-//     }
-//     else{
-//         string text;
-//         int EKey;
-
-//         cout << "Input text: ";
-//         cin >> text;
-
-//         cout << EncryptText(text);
-
-//     return 0;
-//     }
-// }
-
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
     QMainWindow mainWindow;
     Ui::WindowMain ui; // Assuming you have generated the Ui namespace using Qt Designer
+
+    mainWindow.setMinimumSize(480, 660);
+    mainWindow.setMaximumSize(480, 660); 
 
     ui.setupUi(&mainWindow); // Setup the UI
 
