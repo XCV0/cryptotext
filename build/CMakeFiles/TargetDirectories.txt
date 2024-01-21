@@ -1,0 +1,3 @@
+/home/xcv0u/Documents/GitHub/cryptotext/build/CMakeFiles/CryptoText.dir
+/home/xcv0u/Documents/GitHub/cryptotext/build/CMakeFiles/edit_cache.dir
+/home/xcv0u/Documents/GitHub/cryptotext/build/CMakeFiles/rebuild_cache.dir

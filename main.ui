@@ -129,22 +129,6 @@ p, li { white-space: pre-wrap; }
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="startDo_btn">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>400</y>
-      <width>261</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Encrypt/Decrypt</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

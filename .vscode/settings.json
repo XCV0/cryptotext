@@ -47,6 +47,7 @@
         "codecvt": "cpp",
         "ctime": "cpp",
         "iomanip": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "locale": "cpp"
     }
 }
